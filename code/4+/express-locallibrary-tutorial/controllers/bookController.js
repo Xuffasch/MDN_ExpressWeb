@@ -21,7 +21,7 @@ exports.index = function(req, res) {
         },
         genre_count: function(callback) { 
             Genre.countDocuments({}, callback);
-        }
+        },
     }, function(err, results){
         res.render('index', {title: 'Local Library Home', error: err, data: results});
     });
