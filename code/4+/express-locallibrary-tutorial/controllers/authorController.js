@@ -18,8 +18,6 @@ exports.author_list = function(req, res, next) {
 exports.author_detail = function(req, res, next) {
     async.parallel({
         author: function(callback) {
-            console.log('author id for request');
-            console.log(req.params.id);
             Author.findById(req.params.id)
                 .exec(callback)
         },
